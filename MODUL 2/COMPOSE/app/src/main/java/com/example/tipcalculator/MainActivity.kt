@@ -39,7 +39,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun TipCalculatorScreen() {
     var amountInput by remember { mutableStateOf("") }
-    var tipPercentage by remember { mutableStateOf(15.0) }
+    var tipPercentage by remember { mutableDoubleStateOf(15.0) }
     var roundUp by remember { mutableStateOf(false) }
 
     val amount = amountInput.toDoubleOrNull() ?: 0.0
@@ -129,7 +129,7 @@ fun TipCalculatorScreen() {
 
         Text(
             text = "Tip Amount: $tip",
-            fontSize = 38.sp,
+            fontSize = 32.sp,
             fontWeight = FontWeight.Bold
         )
     }

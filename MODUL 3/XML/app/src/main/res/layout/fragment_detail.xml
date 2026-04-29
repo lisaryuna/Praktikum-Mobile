@@ -59,6 +59,6 @@
             android:layout_marginTop="32dp"
             android:backgroundTint="#FB6F92"
             android:textColor="@color/white"
-            android:text="Back to Home"/>
+            android:text="@string/btn_back"/>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

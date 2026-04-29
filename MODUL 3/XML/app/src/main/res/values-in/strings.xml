@@ -7,11 +7,11 @@
     <string name="btn_back">Kembali ke Beranda</string>
     <string name="setting_language">Pilih Bahasa</string>
 
-    <string name="desc_i">Salah satu lagu paling populer dari CAS, lagu ini berfungsi sebagai pengantar tidur bagi orang dewasa dan janji perlindungan mendalam antara dua kekasih...</string>
-    <string name="desc_flash">Mengisahkan dua jiwa kesepian yang bertemu di malam hujan, lagu ini menangkap pertemuan singkat namun penuh kekuatan...</string>
-    <string name="desc_opera">Didorong oleh gairah dan kekaguman yang mendalam, lagu ini mengekspresikan cinta yang begitu besar sehingga penyanyinya rela membangun seluruh gedung opera...</string>
-    <string name="desc_sweet">Lagu ini menggambarkan dua kekasih yang berbagi koneksi cinta sejati, menyoroti kemurnian saat mengetahui pasangan sangat mencintaimu...</string>
-    <string name="desc_sesame">Sebagai singel kedua, lagu ambient dream-pop ini menggambarkan renungan sensual tentang kekasih saat ini...</string>
-    <string name="desc_neon">Sebuah cover memukau dari lagu country tahun 1992, menceritakan kisah memilukan tentang seorang pria yang kehilangan cinta dalam hidupnya...</string>
-    <string name="desc_cry">Diceritakan dari sudut pandang pasangan yang kurang penyayang, menggali dinamika hubungan toksik...</string>
+    <string name="desc_i">Salah satu lagu paling populer dari CAS, lagu ini berfungsi sebagai pengantar tidur bagi orang dewasa dan janji perlindungan mendalam antara dua kekasih. Direkam sebagai improvisasi eksperimental di tangga universitas, lagu ini dengan lembut menangkap manisnya momen kebersamaan mereka dan sumpah untuk saling menjaga dari apa pun yang terjadi di masa depan.</string>
+    <string name="desc_flash">Mengisahkan dua jiwa kesepian yang bertemu di malam hujan, lagu ini menangkap pertemuan singkat namun penuh kekuatan. Mereka menemukan koneksi instan dan melarikan diri ke dalam gelembung kebahagiaan sementara sebelum kenyataan akhirnya menarik mereka kembali, meninggalkan kenangan indah tentang sekilas surga di tengah kekacauan.</string>
+    <string name="desc_opera">Didorong oleh gairah dan kekaguman yang mendalam, lagu ini mengekspresikan cinta yang begitu besar sehingga penyanyinya rela membangun seluruh gedung opera di tempat terpencil hanya untuk menyampaikan besarnya perasaannya kepada orang yang dicintainya.</string>
+    <string name="desc_sweet">Lagu ini dengan indah menggambarkan dua kekasih yang berbagi koneksi cinta sejati, menyoroti kemurnian manis saat mengetahui pasanganmu sangat mencintaimu tanpa perlu ragu atau terlalu banyak berpikir.</string>
+    <string name="desc_sesame">Sebagai singel kedua sebelum album mendatang mereka, lagu ambient dream-pop ini menggambarkan renungan sensual tentang kekasih saat ini, menampilkan lirik intim dan evokatif khas dari band tersebut.</string>
+    <string name="desc_neon">Sebuah cover memukau dari lagu country Brooks &amp; Dunn tahun 1992, lagu ini dengan indah menceritakan kisah memilukan tentang seorang pria yang kehilangan cinta dalam hidupnya dan kini terdampar dalam penderitaan dan rasa sakit, tak mampu melangkah maju.</string>
+    <string name="desc_cry">Diceritakan dari sudut pandang pasangan yang kurang penyayang, lagu ini menggali dinamika hubungan toksik di mana ketidakseimbangan dalam memberi dan menerima kasih sayang terus-menerus berujung pada rasa sakit dan patah hati.</string>
 </resources>

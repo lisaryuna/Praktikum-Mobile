@@ -58,10 +58,7 @@ fun AppNavigation() {
     val navController = rememberNavController()
 
     NavHost(navController = navController, startDestination = "home") {
-        composable("home") {
-            HomeScreen(navController)
-        }
-
+        composable("home") { HomeScreen(navController) }
         composable(
             route = "detail/{songId}",
             arguments = listOf(navArgument("songId") {
@@ -72,9 +69,7 @@ fun AppNavigation() {
             DetailScreen(navController, songId)
         }
 
-        composable("language") {
-            LanguageScreen(navController)
-        }
+        composable("language") { LanguageScreen(navController) }
     }
 }
 
@@ -155,7 +150,7 @@ fun SongItemCard(song: Song, navController: NavController, context: android.cont
 
                 Spacer(modifier = Modifier.height(2.dp))
                 Text(
-                    text = "Year: ${song.year}",
+                    text = "${stringResource(R.string.label_year)} ${song.year}",
                     color = Color.Black,
                     fontSize = 14.sp)
 
@@ -168,7 +163,7 @@ fun SongItemCard(song: Song, navController: NavController, context: android.cont
                         },
                         colors = ButtonDefaults.buttonColors(containerColor = Color.White, contentColor = Watermelon),
                         contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp)
-                    ) { Text("Listen", fontSize = 12.sp) }
+                    ) { Text(stringResource(R.string.btn_listen), fontSize = 12.sp) }
 
                     Spacer(modifier = Modifier.width(8.dp))
 
@@ -176,7 +171,7 @@ fun SongItemCard(song: Song, navController: NavController, context: android.cont
                         onClick = { navController.navigate("detail/${song.id}") },
                         colors = ButtonDefaults.buttonColors(containerColor = Watermelon, contentColor = Color.White),
                         contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp)
-                    ) { Text("Detail", fontSize = 12.sp) }
+                    ) { Text(stringResource(R.string.btn_detail), fontSize = 12.sp) }
                 }
             }
         }
@@ -219,19 +214,19 @@ fun DetailScreen(navController: NavController, songId: Int?) {
                 fontSize = 28.sp
             )
             Text(
-                "Album: ${song.albumName}",
+                "Album: ${stringResource(R.string.label_album)}",
                 color = Color.Black,
                 fontSize = 16.sp,
                 modifier = Modifier.padding(top = 4.dp)
             )
             Text(
-                "Release Year: ${song.year}",
+                "Release Year: ${stringResource(R.string.label_year)}",
                 color = Color.Black,
                 fontSize = 16.sp,
                 modifier = Modifier.padding(top = 4.dp)
             )
             Text(
-                text = song.description,
+                text = stringResource(song.descriptionResId),
                 color = Color.Black,
                 fontSize = 15.sp,
                 lineHeight = 22.sp,
@@ -243,7 +238,7 @@ fun DetailScreen(navController: NavController, songId: Int?) {
                 onClick = { navController.popBackStack()},
                 colors = ButtonDefaults.buttonColors(containerColor = Watermelon, contentColor = Color.White),
                 modifier = Modifier.fillMaxWidth()
-            ) { Text("Back to Home") }
+            ) { Text(stringResource(R.string.btn_back)) }
         }
     }
 }

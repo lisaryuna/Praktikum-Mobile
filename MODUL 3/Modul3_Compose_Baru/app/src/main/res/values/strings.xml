@@ -1,5 +1,17 @@
 <resources>
     <string name="app_name">CAS Music</string>
     <string name="label_album">Album:</string>
+    <string name="label_year">Release Year:</string>
+    <string name="btn_listen">Listen</string>
+    <string name="btn_detail">Detail</string>
+    <string name="btn_back">Back to Home</string>
     <string name="setting_language">Select Language</string>
+
+    <string name="desc_i">One of the most popular songs by CAS, this track acts as a \'grown-up\' lullaby and a promise of deep protection between two lovers. Recorded as an experimental improvisation in a university stairway, it tenderly captures the sweetness of their shared moments and a vow to safeguard each other from whatever the future holds.</string>
+    <string name="desc_flash">Following two lonely souls who meet on a rainy night, this song captures a fleeting yet powerful encounter. They find an instant connection and escape into a temporary bubble of happiness before reality inevitably pulls them back, leaving them with a beautiful memory of a glimpse of heaven amidst the chaos.</string>
+    <string name="desc_opera">Driven by deep passion and admiration, this song expresses a love so profound that the singer is willing to build an entire opera house in a secluded place just to properly convey the magnitude of his feelings to the one he loves.</string>
+    <string name="desc_sweet">This track beautifully describes two lovers who share a mutual connection of true love, highlighting the pure sweetness of knowing your partner loves you deeply without any need for second-guessing or overthinking.</string>
+    <string name="desc_sesame">Serving as the second single before their upcoming album, this ambient dream-pop track depicts sensual musings about a current lover, featuring the signature intimate and evocative lyrics typical of the band.</string>
+    <string name="desc_neon">A mesmerizing cover of the 1992 Brooks &amp; Dunn country track, this song beautifully tells the heartbreaking story of a man who has lost the love of his life and is now stranded in a state of misery and pain, unable to move on.</string>
+    <string name="desc_cry">Told from the perspective of the less affectionate partner, this song delves into the dynamics of a toxic relationship where an imbalance in giving and receiving affection constantly leads to pain and heartache.</string>
 </resources>

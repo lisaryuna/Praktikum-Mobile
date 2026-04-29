@@ -1,7 +1,17 @@
 <resources>
     <string name="app_name">Musik CAS</string>
     <string name="label_album">Album:</string>
-    <string name="btn_listen">Dengarkan</string>
+    <string name="label_year">Tahun Rilis:</string>
+    <string name="btn_listen">Dengar</string>
     <string name="btn_detail">Detail</string>
-    <string name="setting_language">Ganti Bahasa</string>
+    <string name="btn_back">Kembali ke Beranda</string>
+    <string name="setting_language">Pilih Bahasa</string>
+
+    <string name="desc_i">Salah satu lagu paling populer dari CAS, lagu ini berfungsi sebagai pengantar tidur bagi orang dewasa dan janji perlindungan mendalam antara dua kekasih...</string>
+    <string name="desc_flash">Mengisahkan dua jiwa kesepian yang bertemu di malam hujan, lagu ini menangkap pertemuan singkat namun penuh kekuatan...</string>
+    <string name="desc_opera">Didorong oleh gairah dan kekaguman yang mendalam, lagu ini mengekspresikan cinta yang begitu besar sehingga penyanyinya rela membangun seluruh gedung opera...</string>
+    <string name="desc_sweet">Lagu ini menggambarkan dua kekasih yang berbagi koneksi cinta sejati, menyoroti kemurnian saat mengetahui pasangan sangat mencintaimu...</string>
+    <string name="desc_sesame">Sebagai singel kedua, lagu ambient dream-pop ini menggambarkan renungan sensual tentang kekasih saat ini...</string>
+    <string name="desc_neon">Sebuah cover memukau dari lagu country tahun 1992, menceritakan kisah memilukan tentang seorang pria yang kehilangan cinta dalam hidupnya...</string>
+    <string name="desc_cry">Diceritakan dari sudut pandang pasangan yang kurang penyayang, menggali dinamika hubungan toksik...</string>
 </resources>

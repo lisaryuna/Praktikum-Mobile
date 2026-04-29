@@ -1,7 +1,17 @@
 <resources>
     <string name="app_name">CAS Music</string>
     <string name="label_album">Album:</string>
+    <string name="label_year">Release Year:</string>
     <string name="btn_listen">Listen</string>
     <string name="btn_detail">Detail</string>
-    <string name="setting_language">Change Language</string>
+    <string name="btn_back">Back to Home</string>
+    <string name="setting_language">Select Language</string>
+
+    <string name="desc_i">One of the most popular songs by CAS, this track acts as a \'grown-up\' lullaby and a promise of deep protection between two lovers...</string>
+    <string name="desc_flash">Following two lonely souls who meet on a rainy night, this song captures a fleeting yet powerful encounter...</string>
+    <string name="desc_opera">Driven by deep passion and admiration, this song expresses a love so profound that the singer is willing to build an entire opera house...</string>
+    <string name="desc_sweet">This track beautifully describes two lovers who share a mutual connection of true love...</string>
+    <string name="desc_sesame">Serving as the second single, this ambient dream-pop track depicts sensual musings about a current lover...</string>
+    <string name="desc_neon">A mesmerizing cover of the 1992 Brooks &amp; Dunn track, telling the story of a man who lost his life\'s love...</string>
+    <string name="desc_cry">Told from the perspective of the less affectionate partner, delving into toxic relationship dynamics...</string>
 </resources>

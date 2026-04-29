@@ -9,5 +9,5 @@ data class Song(
     val year: String,
     val imageResId: Int,
     val externalLink: String,
-    val description: String
+    val descriptionResId: Int
 ) : Serializable

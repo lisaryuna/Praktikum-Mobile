@@ -27,9 +27,13 @@ class DetailFragment : Fragment() {
         if (song != null) {
             binding.imgDetailCover.setImageResource(song.imageResId)
             binding.tvDetailTitle.text = song.title
-            binding.tvDetailAlbum.text = "Album: ${song.albumName}"
-            binding.tvDetailYear.text = "Release Year: ${song.year}"
-            binding.tvDetailDesc.text = song.description
+
+            val labelAlbum = getString(R.string.label_album)
+            val labelYear = getString(R.string.label_year)
+
+            binding.tvDetailAlbum.text = "$labelAlbum ${song.albumName}"
+            binding.tvDetailYear.text = "$labelYear ${song.year}"
+            binding.tvDetailDesc.text = getString(song.descriptionResId)
         }
 
         binding.btnBack.setOnClickListener {

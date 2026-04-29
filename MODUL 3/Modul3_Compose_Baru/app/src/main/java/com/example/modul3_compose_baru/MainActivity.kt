@@ -106,17 +106,19 @@ fun HomeScreen(navController: NavController) {
             }
         }
 
-        LazyRow(contentPadding = PaddingValues(horizontal = 8.dp)) {
+        LazyRow(contentPadding = PaddingValues(horizontal = 16.dp),
+            horizontalArrangement = Arrangement.spacedBy(16.dp)) {
             items(SongData.songs) { song ->
-                SongItemCard(song, navController, context, Modifier.width(320.dp))
+                SongItemCard(song = song, navController = navController, context = context, Modifier.fillParentMaxWidth())
             }
         }
 
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(16.dp))
 
-        LazyColumn(contentPadding = PaddingValues(horizontal = 8.dp, vertical = 8.dp)) {
+        LazyColumn(contentPadding = PaddingValues(start = 16.dp, end = 16.dp, bottom = 16.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp)) {
             items(SongData.songs) { song ->
-                SongItemCard(song, navController, context, Modifier.fillMaxWidth())
+                SongItemCard(song = song, navController = navController, context = context, Modifier.fillMaxWidth())
             }
         }
     }
@@ -128,7 +130,7 @@ fun SongItemCard(song: Song, navController: NavController, context: android.cont
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(containerColor = PinkChampagne),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
-        modifier = modifier.padding(8.dp)
+        modifier = modifier
     ) {
         Row(modifier = Modifier.fillMaxWidth().padding(12.dp)) {
             Image(
@@ -147,12 +149,6 @@ fun SongItemCard(song: Song, navController: NavController, context: android.cont
                     fontSize = 16.sp)
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(text = "${stringResource(R.string.label_album)} ${song.albumName}", color = Color.Black, fontSize = 14.sp)
-
-                Spacer(modifier = Modifier.height(2.dp))
-                Text(
-                    text = "${stringResource(R.string.label_year)} ${song.year}",
-                    color = Color.Black,
-                    fontSize = 14.sp)
 
                 Spacer(modifier = Modifier.height(8.dp))
                 Row(horizontalArrangement = Arrangement.End, modifier = Modifier.fillMaxWidth()) {
@@ -214,13 +210,13 @@ fun DetailScreen(navController: NavController, songId: Int?) {
                 fontSize = 28.sp
             )
             Text(
-                "Album: ${stringResource(R.string.label_album)}",
+                "${stringResource(R.string.label_album)} ${song.albumName}",
                 color = Color.Black,
                 fontSize = 16.sp,
                 modifier = Modifier.padding(top = 4.dp)
             )
             Text(
-                "Release Year: ${stringResource(R.string.label_year)}",
+                "${stringResource(R.string.label_year)} ${song.year}",
                 color = Color.Black,
                 fontSize = 16.sp,
                 modifier = Modifier.padding(top = 4.dp)

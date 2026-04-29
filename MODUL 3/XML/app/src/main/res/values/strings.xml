@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CAS Music</string>
+    <string name="label_album">Album:</string>
+    <string name="btn_listen">Listen</string>
+    <string name="btn_detail">Detail</string>
+    <string name="setting_language">Change Language</string>
+</resources>

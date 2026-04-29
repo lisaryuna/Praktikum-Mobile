@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Musik CAS</string>
+    <string name="label_album">Album:</string>
+    <string name="btn_listen">Dengarkan</string>
+    <string name="btn_detail">Detail</string>
+    <string name="setting_language">Ganti Bahasa</string>
+</resources>

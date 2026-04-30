@@ -146,7 +146,7 @@ fun SongItemCard(song: Song, navController: NavController, context: android.cont
                     song.title,
                     color = Color.Black,
                     fontWeight = FontWeight.Bold,
-                    fontSize = 16.sp)
+                    fontSize = 15.sp)
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(text = "${stringResource(R.string.label_album)} ${song.albumName}", color = Color.Black, fontSize = 14.sp)
 

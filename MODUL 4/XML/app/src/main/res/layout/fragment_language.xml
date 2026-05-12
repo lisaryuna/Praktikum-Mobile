@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#FFE5EC">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/setting_language"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_marginBottom="32dp"/>
+
+    <Button
+        android:id="@+id/btn_english"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FB6F92"
+        android:textColor="@android:color/white"
+        android:text="English"/>
+
+    <Button
+        android:id="@+id/btn_indonesia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FB6F92"
+        android:textColor="@android:color/white"
+        android:text="Bahasa Indonesia"/>
+</LinearLayout>

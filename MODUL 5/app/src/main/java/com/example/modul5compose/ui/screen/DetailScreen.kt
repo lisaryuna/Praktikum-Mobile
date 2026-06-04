@@ -1,4 +1,4 @@
-package com.example.modul5compose
+package com.example.modul5compose.ui.screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -19,6 +19,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.example.modul5compose.SongData
 import com.example.modul5compose.ui.theme.*
 
 @Composable
@@ -56,13 +57,13 @@ fun DetailScreen(navController: NavController, songId: Int?) {
                 fontSize = 28.sp
             )
             Text(
-                "${stringResource(R.string.label_album)} ${song.albumName}",
+                "${stringResource(com.example.modul5compose.R.string.label_album)} ${song.albumName}",
                 color = Color.Black,
                 fontSize = 16.sp,
                 modifier = Modifier.padding(top = 4.dp)
             )
             Text(
-                "${stringResource(R.string.label_year)} ${song.year}",
+                "${stringResource(com.example.modul5compose.R.string.label_year)} ${song.year}",
                 color = Color.Black,
                 fontSize = 16.sp,
                 modifier = Modifier.padding(top = 4.dp)
@@ -80,7 +81,7 @@ fun DetailScreen(navController: NavController, songId: Int?) {
                 onClick = { navController.popBackStack()},
                 colors = ButtonDefaults.buttonColors(containerColor = Watermelon, contentColor = Color.White),
                 modifier = Modifier.fillMaxWidth()
-            ) { Text(stringResource(_root_ide_package_.androidx.compose.material3.R.string.btn_back)) }
+            ) { Text(stringResource(R.string.btn_back)) }
         }
     }
 }

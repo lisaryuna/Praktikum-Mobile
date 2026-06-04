@@ -1,4 +1,4 @@
-package com.example.modul5compose
+package com.example.modul5compose.ui.screen
 
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.compose.foundation.background
@@ -14,6 +14,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.os.LocaleListCompat
 import androidx.navigation.NavController
+import com.example.modul5compose.R
 import com.example.modul5compose.ui.theme.*
 
 @Composable

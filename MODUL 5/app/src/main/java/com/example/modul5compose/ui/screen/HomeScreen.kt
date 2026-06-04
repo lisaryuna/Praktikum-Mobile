@@ -1,4 +1,4 @@
-package com.example.modul5compose
+package com.example.modul5compose.ui.screen
 
 import android.content.Intent
 import android.net.Uri
@@ -22,6 +22,9 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.modul5compose.ui.theme.*
 import com.example.modul5compose.R
+import com.example.modul5compose.ui.navigation.SongItemCard
+import com.example.modul5compose.SongViewModel
+import com.example.modul5compose.SongViewModelFactory
 
 @Composable
 fun HomeScreen(

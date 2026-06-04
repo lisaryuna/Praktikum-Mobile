@@ -1,4 +1,4 @@
-package com.example.modul5compose
+package com.example.modul5compose.ui.navigation
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -19,6 +19,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.example.modul5compose.R
+import com.example.modul5compose.Song
+import com.example.modul5compose.ui.screen.DetailScreen
+import com.example.modul5compose.ui.screen.HomeScreen
+import com.example.modul5compose.ui.screen.LanguageScreen
 import com.example.modul5compose.ui.theme.*
 
 @Composable

@@ -1,22 +1,9 @@
 package com.example.modul5compose
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Text
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -32,6 +19,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.example.modul5compose.ui.theme.*
 
 @Composable
 fun AppNavigation() {
@@ -77,7 +65,7 @@ fun SongItemCard(song: Song, onDetailClick: () -> Unit, onLinkClick: () -> Unit,
                     fontWeight = FontWeight.Bold,
                     fontSize = 15.sp)
                 Spacer(modifier = Modifier.height(4.dp))
-                Text(text = "${stringResource(_root_ide_package_.androidx.compose.material3.R.string.label_album)} ${song.albumName}", color = Color.Black, fontSize = 14.sp)
+                Text(text = "${stringResource(R.string.label_album)} ${song.albumName}", color = Color.Black, fontSize = 14.sp)
 
                 Spacer(modifier = Modifier.height(8.dp))
                 Row(horizontalArrangement = Arrangement.End, modifier = Modifier.fillMaxWidth()) {
@@ -85,7 +73,7 @@ fun SongItemCard(song: Song, onDetailClick: () -> Unit, onLinkClick: () -> Unit,
                         onClick = onLinkClick,
                         colors = ButtonDefaults.buttonColors(containerColor = Color.White, contentColor = Watermelon),
                         contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp)
-                    ) { Text(stringResource(_root_ide_package_.androidx.compose.material3.R.string.btn_listen), fontSize = 12.sp) }
+                    ) { Text(stringResource(R.string.btn_listen), fontSize = 12.sp) }
 
                     Spacer(modifier = Modifier.width(8.dp))
 
@@ -93,7 +81,7 @@ fun SongItemCard(song: Song, onDetailClick: () -> Unit, onLinkClick: () -> Unit,
                         onClick = onDetailClick,
                         colors = ButtonDefaults.buttonColors(containerColor = Watermelon, contentColor = Color.White),
                         contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp)
-                    ) { Text(stringResource(_root_ide_package_.androidx.compose.material3.R.string.btn_detail), fontSize = 12.sp) }
+                    ) { Text(stringResource(R.string.btn_detail), fontSize = 12.sp) }
                 }
             }
         }

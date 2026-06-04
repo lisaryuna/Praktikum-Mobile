@@ -2,7 +2,6 @@ package com.example.modul5compose
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -28,7 +27,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.core.os.LocaleListCompat
 import androidx.navigation.NavController
 
 @Composable
@@ -66,13 +64,13 @@ fun DetailScreen(navController: NavController, songId: Int?) {
                 fontSize = 28.sp
             )
             Text(
-                "${stringResource(_root_ide_package_.androidx.compose.material3.R.string.label_album)} ${song.albumName}",
+                "${stringResource(R.string.label_album)} ${song.albumName}",
                 color = Color.Black,
                 fontSize = 16.sp,
                 modifier = Modifier.padding(top = 4.dp)
             )
             Text(
-                "${stringResource(_root_ide_package_.androidx.compose.material3.R.string.label_year)} ${song.year}",
+                "${stringResource(R.string.label_year)} ${song.year}",
                 color = Color.Black,
                 fontSize = 16.sp,
                 modifier = Modifier.padding(top = 4.dp)
@@ -93,41 +91,4 @@ fun DetailScreen(navController: NavController, songId: Int?) {
             ) { Text(stringResource(_root_ide_package_.androidx.compose.material3.R.string.btn_back)) }
         }
     }
-}
-
-@Composable
-fun LanguageScreen(navController: NavController) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(LavenderBlush)
-            .padding(24.dp),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(
-            text = stringResource(_root_ide_package_.androidx.compose.material3.R.string.setting_language),
-            color = Color.Black,
-            fontSize = 24.sp,
-            fontWeight = FontWeight.Bold,
-            modifier = Modifier.padding(bottom = 24.dp)
-        )
-        Button(
-            onClick = { setAppLocale("en") },
-            colors = ButtonDefaults.buttonColors(containerColor = Watermelon, contentColor = Color.White),
-            modifier = Modifier.fillMaxWidth()
-        ) { Text("English")}
-
-        Spacer(modifier = Modifier.height(16.dp))
-        Button(
-            onClick = { setAppLocale("id") },
-            colors = ButtonDefaults.buttonColors(containerColor = Watermelon, contentColor = Color.White),
-            modifier = Modifier.fillMaxWidth()
-        ) { Text("Indonesia")}
-    }
-}
-
-fun setAppLocale(languageTag: String) {
-    val localeList = LocaleListCompat.forLanguageTags(languageTag)
-    AppCompatDelegate.setApplicationLocales(localeList)
 }

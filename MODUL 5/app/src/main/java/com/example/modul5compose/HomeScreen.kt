@@ -3,24 +3,12 @@ package com.example.modul5compose
 import android.content.Intent
 import android.net.Uri
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
+import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -32,6 +20,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import com.example.modul5compose.ui.theme.*
+import com.example.modul5compose.R
 
 @Composable
 fun HomeScreen(
@@ -71,7 +61,7 @@ fun HomeScreen(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
-                text = stringResource(id = _root_ide_package_.androidx.compose.material3.R.string.app_name),
+                text = stringResource(id = R.string.app_name),
                 color = Color.Black,
                 fontSize = 22.sp,
                 fontWeight = FontWeight.Bold
@@ -89,12 +79,12 @@ fun HomeScreen(
 
         LazyRow(contentPadding = PaddingValues(horizontal = 16.dp),
             horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-            _root_ide_package_.androidx.compose.foundation.lazy.LazyListScope.items(songList) { song ->
+            items(songList) { song ->
                 SongItemCard(
                     song = song,
                     onDetailClick = { viewModel.onDetailClicked(song) },
                     onLinkClick = { viewModel.onIntentClicked(song.externalLink) },
-                    _root_ide_package_.androidx.compose.ui.Modifier.Companion.fillParentMaxWidth()
+                    Modifier.Companion.fillParentMaxWidth()
                 )
             }
         }
@@ -103,7 +93,7 @@ fun HomeScreen(
 
         LazyColumn(contentPadding = PaddingValues(start = 16.dp, end = 16.dp, bottom = 16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)) {
-            _root_ide_package_.androidx.compose.foundation.lazy.LazyListScope.items(songList) { song ->
+            items(songList) { song ->
                 SongItemCard(
                     song = song,
                     onDetailClick = { viewModel.onDetailClicked(song) },

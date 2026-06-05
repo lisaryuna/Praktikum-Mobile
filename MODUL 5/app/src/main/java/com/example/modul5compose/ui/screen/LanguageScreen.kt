@@ -14,7 +14,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.os.LocaleListCompat
 import androidx.navigation.NavController
-import com.example.modul5compose.R
 import com.example.modul5compose.ui.theme.*
 
 @Composable
@@ -28,7 +27,7 @@ fun LanguageScreen(navController: NavController) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = stringResource(R.string.setting_language),
+            text = "Pengaturan Bahasa",
             color = Color.Black,
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold,

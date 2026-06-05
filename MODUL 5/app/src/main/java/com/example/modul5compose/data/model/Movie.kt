@@ -24,7 +24,10 @@ data class Movie(
     val posterPath: String?,
 
     @SerialName("release_date")
-    val releaseDate: String?
+    val releaseDate: String?,
+
+    @SerialName("vote_average")
+    val voteAverage: Double?
 ) {
 
 }

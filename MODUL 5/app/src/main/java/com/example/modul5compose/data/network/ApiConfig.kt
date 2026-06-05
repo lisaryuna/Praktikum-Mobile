@@ -8,6 +8,7 @@ import retrofit2.converter.kotlinx.serialization.asConverterFactory
 
 object ApiConfig {
     private const val BASE_URL = "https://api.themoviedb.org/3/"
+    const val IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500"
 
     fun getApiService() : TmdbApiService {
         val json = Json { ignoreUnknownKeys = true}

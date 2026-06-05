@@ -8,6 +8,8 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -19,14 +21,26 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.modul5compose.SongData
+import coil.compose.AsyncImage
+import com.example.modul5compose.MovieViewModel
+import com.example.modul5compose.data.network.ApiConfig
+import com.example.modul5compose.data.repository.UiState
+// import com.example.modul5compose.SongData
 import com.example.modul5compose.ui.theme.*
 
 @Composable
-fun DetailScreen(navController: NavController, songId: Int?) {
-    val song = SongData.songs.find { it.id == songId }
+fun DetailScreen(
+    navController: NavController,
+    movieId: Int?,
+    viewModel: MovieViewModel
+    ) {
 
-    if (song != null) {
+    val movieState by viewModel.movieState.collectAsState()
+    val movie = if (movieState is UiState.Success) {
+        (movieState as UiState.Success).data.find { it.id == movieId }
+    } else null
+
+     if (movie != null) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -35,13 +49,12 @@ fun DetailScreen(navController: NavController, songId: Int?) {
                 .padding(16.dp)
         ) {
             Box(
-                modifier = Modifier
-                    .fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth(),
                 contentAlignment = Alignment.Center
             ) {
-                Image(
-                    painter = painterResource(id = song.imageResId),
-                    contentDescription = null,
+                AsyncImage(
+                    model = "${ApiConfig.IMAGE_BASE_URL}${movie.posterPath}",
+                    contentDescription = "Poster ${movie.title}",
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
                         .size(320.dp)
@@ -51,25 +64,25 @@ fun DetailScreen(navController: NavController, songId: Int?) {
 
             Spacer(modifier = Modifier.height(16.dp))
             Text(
-                song.title,
+                movie.title,
                 color = Color.Black,
                 fontWeight = FontWeight.Bold,
                 fontSize = 28.sp
             )
             Text(
-                "${stringResource(com.example.modul5compose.R.string.label_album)} ${song.albumName}",
+                "Tanggal Rilis: ${movie.releaseDate}",
                 color = Color.Black,
                 fontSize = 16.sp,
                 modifier = Modifier.padding(top = 4.dp)
             )
             Text(
-                "${stringResource(com.example.modul5compose.R.string.label_year)} ${song.year}",
+                "Rating: ${movie.voteAverage}/10",
                 color = Color.Black,
                 fontSize = 16.sp,
                 modifier = Modifier.padding(top = 4.dp)
             )
             Text(
-                text = stringResource(song.descriptionResId),
+                movie.overview,
                 color = Color.Black,
                 fontSize = 15.sp,
                 lineHeight = 22.sp,
@@ -81,7 +94,11 @@ fun DetailScreen(navController: NavController, songId: Int?) {
                 onClick = { navController.popBackStack()},
                 colors = ButtonDefaults.buttonColors(containerColor = Watermelon, contentColor = Color.White),
                 modifier = Modifier.fillMaxWidth()
-            ) { Text(stringResource(R.string.btn_back)) }
+            ) { Text("Kembali") }
         }
-    }
+    } else {
+        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+            Text("Data film tidak ditemukan.", color = Color.Black)
+        }
+     }
 }

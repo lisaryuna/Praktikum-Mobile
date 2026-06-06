@@ -52,7 +52,7 @@ fun HomeScreen(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
-                text = stringResource(id = R.string.app_name),
+                text = stringResource(R.string.app_name),
                 color = Color.Black,
                 fontSize = 22.sp,
                 fontWeight = FontWeight.Bold
@@ -76,7 +76,7 @@ fun HomeScreen(
             }
             is UiState.Error -> {
                 Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                    Text(text = "Ups, Gagal: ${state.errorMessage}", color = Color.Red)
+                    Text(text = "${stringResource(R.string.error_fetch)} ${state.errorMessage}", color = Color.Red)
                 }
             }
             is UiState.Success -> {
@@ -95,7 +95,8 @@ fun HomeScreen(
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                LazyColumn(contentPadding = PaddingValues(start = 16.dp, end = 16.dp, bottom = 16.dp),
+                LazyColumn( modifier = Modifier.weight(1f),
+                    contentPadding = PaddingValues(start = 16.dp, end = 16.dp, bottom = 16.dp),
                     verticalArrangement = Arrangement.spacedBy(16.dp)) {
                     items(movieList) { movie ->
                         MovieItemCard(
@@ -146,7 +147,7 @@ fun MovieItemCard(movie: Movie, onClick: () -> Unit, modifier: Modifier = Modifi
                 Spacer(modifier = Modifier.height(4.dp))
 
                 Text(
-                    text = "Rilis: ${movie.releaseDate}",
+                    text = "${stringResource(R.string.label_release)} ${movie.releaseDate}",
                     color = Color.Black,
                     fontSize = 14.sp
                 )
@@ -165,7 +166,7 @@ fun MovieItemCard(movie: Movie, onClick: () -> Unit, modifier: Modifier = Modifi
                         ),
                         contentPadding = PaddingValues(12.dp, 4.dp)
                     ) {
-                        Text("Detail", fontSize = 12.sp)
+                        Text(stringResource(R.string.btn_detail), fontSize = 12.sp)
                     }
                 }
             }

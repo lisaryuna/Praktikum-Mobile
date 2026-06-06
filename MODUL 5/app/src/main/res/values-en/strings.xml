@@ -1,3 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">TMDB Popular Movies</string>
+    <string name="setting_language">Language Settings</string>
+    <string name="btn_english">English</string>
+    <string name="btn_indonesia">Indonesia</string>
+    <string name="label_release">Release:</string>
+    <string name="label_release_date">Release Date:</string>
+    <string name="label_rating">Rating:</string>
+    <string name="btn_detail">Detail</string>
+    <string name="btn_back">Back</string>
+    <string name="error_fetch">Oops, Failed:</string>
+    <string name="error_not_found">Movie data not found.</string>
 </resources>

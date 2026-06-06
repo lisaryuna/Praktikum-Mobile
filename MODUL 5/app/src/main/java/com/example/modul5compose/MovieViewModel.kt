@@ -12,6 +12,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import timber.log.Timber
+import java.util.Locale
 
 class MovieViewModel(private val repository: MovieRepository) : ViewModel() {
     private val _movieState = MutableStateFlow<UiState<List<Movie>>>(UiState.Loading)
@@ -21,14 +22,22 @@ class MovieViewModel(private val repository: MovieRepository) : ViewModel() {
     val navigationEvent: StateFlow<Movie?> = _navigationEvent.asStateFlow()
 
     init {
-        loadMovies()
+        reloadMoviesByLocale()
     }
 
-    private fun loadMovies() {
-        Timber.d("Memuat data film populer dari TMDB API...")
+    fun reloadMoviesByLocale() {
+        val currentLanguage = Locale.getDefault().language
+        val tmdbLanguage = if (currentLanguage == "id" || currentLanguage == "in") "id-ID" else "en-US"
+
+        loadMovies(tmdbLanguage)
+    }
+
+    private fun loadMovies(language: String) {
+        Timber.d("Memuat data film (Bahasa: $language)...")
+        _movieState.value = UiState.Loading
 
         viewModelScope.launch {
-            repository.getPopularMovies().collect { state ->
+            repository.getPopularMovies(language).collect { state ->
                 _movieState.value = state
 
                 when (state) {

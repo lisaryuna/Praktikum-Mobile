@@ -1,6 +1,5 @@
 package com.example.modul5compose.ui.screen
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -15,7 +14,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -25,8 +23,8 @@ import coil.compose.AsyncImage
 import com.example.modul5compose.MovieViewModel
 import com.example.modul5compose.data.network.ApiConfig
 import com.example.modul5compose.data.repository.UiState
-// import com.example.modul5compose.SongData
 import com.example.modul5compose.ui.theme.*
+import com.example.modul5compose.R
 
 @Composable
 fun DetailScreen(
@@ -70,13 +68,13 @@ fun DetailScreen(
                 fontSize = 28.sp
             )
             Text(
-                "Tanggal Rilis: ${movie.releaseDate}",
+                "${stringResource(R.string.label_release_date)} ${movie.releaseDate}",
                 color = Color.Black,
                 fontSize = 16.sp,
                 modifier = Modifier.padding(top = 4.dp)
             )
             Text(
-                "Rating: ${movie.voteAverage}/10",
+                "${stringResource(R.string.label_rating)} ${movie.voteAverage}/10",
                 color = Color.Black,
                 fontSize = 16.sp,
                 modifier = Modifier.padding(top = 4.dp)
@@ -94,11 +92,11 @@ fun DetailScreen(
                 onClick = { navController.popBackStack()},
                 colors = ButtonDefaults.buttonColors(containerColor = Watermelon, contentColor = Color.White),
                 modifier = Modifier.fillMaxWidth()
-            ) { Text("Kembali") }
+            ) { Text(stringResource(R.string.btn_back)) }
         }
     } else {
         Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-            Text("Data film tidak ditemukan.", color = Color.Black)
+            Text((stringResource(R.string.error_not_found)), color = Color.Black)
         }
      }
 }

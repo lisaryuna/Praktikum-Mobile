@@ -39,6 +39,10 @@ fun HomeScreen(
         }
     }
 
+    LaunchedEffect(Unit) {
+        viewModel.reloadMoviesByLocale()
+    }
+
     Column(
         modifier = Modifier
             .fillMaxSize()

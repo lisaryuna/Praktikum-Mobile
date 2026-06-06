@@ -80,7 +80,11 @@ fun DetailScreen(
                 modifier = Modifier.padding(top = 4.dp)
             )
             Text(
-                movie.overview,
+                text = if (movie.overview.isNotBlank()) {
+                    movie.overview
+                } else {
+                    "Deskripsi belum tersedia dalam bahasa ini."
+                },
                 color = Color.Black,
                 fontSize = 15.sp,
                 lineHeight = 22.sp,

@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">modul5compose</string>
+    <string name="app_name">Film Terpopuler TMDB</string>
+
+    <string name="setting_language">Pengaturan Bahasa</string>
+    <string name="btn_english">English</string>
+    <string name="btn_indonesia">Indonesia</string>
+
+    <string name="label_release">Rilis:</string>
+    <string name="label_release_date">Tanggal Rilis:</string>
+    <string name="label_rating">Rating:</string>
+
+    <string name="btn_detail">Detail</string>
+    <string name="btn_back">Kembali</string>
+    <string name="error_fetch">Ups, Gagal:</string>
+    <string name="error_not_found">Data film tidak ditemukan.</string>
 </resources>

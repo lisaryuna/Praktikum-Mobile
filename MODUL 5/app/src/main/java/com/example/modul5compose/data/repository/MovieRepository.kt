@@ -17,10 +17,10 @@ class MovieRepository {
 
     private val apiKey = BuildConfig.TMDB_API_KEY
 
-    fun getPopularMovies() : Flow<UiState<List<Movie>>> = flow {
+    fun getPopularMovies(language: String) : Flow<UiState<List<Movie>>> = flow {
         emit(UiState.Loading)
         try {
-            val response = apiService.getPopularMovies(apiKey)
+            val response = apiService.getPopularMovies(apiKey = apiKey, language = language)
             emit(UiState.Success(response.results))
         } catch (e: Exception) {
             emit(UiState.Error(e.message ?: "Terjadi kesalahan jaringan"))

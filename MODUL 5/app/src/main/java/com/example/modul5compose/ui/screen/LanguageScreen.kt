@@ -15,6 +15,7 @@ import androidx.compose.ui.unit.sp
 import androidx.core.os.LocaleListCompat
 import androidx.navigation.NavController
 import com.example.modul5compose.ui.theme.*
+import com.example.modul5compose.R
 
 @Composable
 fun LanguageScreen(navController: NavController) {
@@ -27,7 +28,7 @@ fun LanguageScreen(navController: NavController) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "Pengaturan Bahasa",
+            text = stringResource(R.string.setting_language),
             color = Color.Black,
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold,
@@ -37,14 +38,14 @@ fun LanguageScreen(navController: NavController) {
             onClick = { setAppLocale("en") },
             colors = ButtonDefaults.buttonColors(containerColor = Watermelon, contentColor = Color.White),
             modifier = Modifier.fillMaxWidth()
-        ) { Text("English")}
+        ) { Text(stringResource(R.string.btn_english))}
 
         Spacer(modifier = Modifier.height(16.dp))
         Button(
             onClick = { setAppLocale("id") },
             colors = ButtonDefaults.buttonColors(containerColor = Watermelon, contentColor = Color.White),
             modifier = Modifier.fillMaxWidth()
-        ) { Text("Indonesia")}
+        ) { Text(stringResource(R.string.btn_indonesia))}
     }
 }
 

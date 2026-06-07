@@ -1,5 +1,7 @@
 package com.example.modul5compose.data.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -10,7 +12,9 @@ data class MovieResponse(
 )
 
 @Serializable
+@Entity(tableName = "movies")
 data class Movie(
+    @PrimaryKey
     @SerialName("id")
     val id: Int,
 

@@ -8,13 +8,14 @@ import com.example.modul5compose.data.model.Movie
 import kotlinx.coroutines.flow.Flow
 
 @Dao
+@JvmSuppressWildcards
 interface MovieDao {
     @Query("SELECT * FROM movies")
     fun getAllMovies(): Flow<List<Movie>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertMovies(movies: List<Movie>)
+    suspend fun insertMovies(movies: List<Movie>): List<Long>
 
     @Query("DELETE FROM movies")
-    suspend fun deleteAllMovies()
+    suspend fun deleteAllMovies(): Int
 }
